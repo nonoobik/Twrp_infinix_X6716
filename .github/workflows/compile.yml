@@ -42,7 +42,7 @@ jobs:
         make recoveryimage -j$(nproc --all)
 
     - name: Загрузка готового TWRP на GitHub
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: TWRP_Infinix_Note30i_v1992RU
         path: ~/twrp/out/target/product/Infinix-X6716/recovery.img
