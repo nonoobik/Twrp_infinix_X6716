@@ -17,8 +17,8 @@ jobs:
 
     - name: Скачивание исходников TWRP напрямую
       run: |
-        git clone --depth=1 https://github.com -b twrp-12.1 ~/twrp
-        git clone --depth=1 https://github.com -b twrp-12.1 ~/twrp/build
+        git clone --depth=1 "https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git" -b twrp-12.1 ~/twrp
+        git clone --depth=1 "https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git" -b twrp-12.1 ~/twrp/build
 
     - name: Клонирование твоего дерева устройства
       run: |
@@ -38,3 +38,4 @@ jobs:
       with:
         name: TWRP_Infinix_Note30i_v1992RU
         path: ~/twrp/out/target/product/Infinix-X6716/recovery.img
+        
