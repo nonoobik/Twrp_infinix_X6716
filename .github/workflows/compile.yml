@@ -28,6 +28,7 @@ jobs:
     - name: Запуск компиляции рекавери
       run: |
         cd ~/twrp
+        mv build/* . 2>/dev/null || true
         export ALLOW_MISSING_DEPENDENCIES=true
         source build/envsetup.sh
         lunch twrp_Infinix-X6716-eng || lunch omni_Infinix-X6716-eng
