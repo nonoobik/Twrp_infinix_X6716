@@ -17,9 +17,9 @@ jobs:
 
     - name: Установка утилиты Repo
       run: |
+        sudo apt-get install -y repo
         mkdir -p ~/bin
-        curl https://googleapis.com > ~/bin/repo
-        chmod a+x ~/bin/repo
+        ln -s /usr/bin/repo ~/bin/repo
         export PATH=~/bin:$PATH
 
     - name: Скачивание исходников TWRP 12.1
