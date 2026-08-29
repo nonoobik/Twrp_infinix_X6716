@@ -37,7 +37,7 @@ jobs:
         make recoveryimage -j$(nproc --all)
 
     - name: Save
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: TWRP_Infinix_X6716
         path: ~/twrp/out/target/product/Infinix-X6716/recovery.img
