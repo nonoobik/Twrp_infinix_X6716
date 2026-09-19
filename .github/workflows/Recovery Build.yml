@@ -123,6 +123,14 @@ jobs:
         git clone ${{ github.event.inputs.COMMON_TREE_URL }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.COMMON_PATH }}
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
+    - name: Unzip Custom Root Folder
+      run: |
+        cd device/infinix/X6716/recovery
+        rm -rf root
+        unzip root.zip
+        rm root.zip
+      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
+      
     - name: Check Build Tree
       uses: haya14busa/action-cond@v1
       id: buildtree
@@ -135,14 +143,6 @@ jobs:
       uses: pierotofy/set-swap-space@master
       with:
         swap-size-gb: 12
-
-    - name: Unzip Custom Root Folder
-      run: |
-        cd device/infinix/X6716/recovery
-        rm -rf root
-        unzip root.zip -d root
-        rm root.zip
-        
 
     - name: Building recovery
       run: |
