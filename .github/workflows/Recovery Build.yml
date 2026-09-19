@@ -126,7 +126,7 @@ jobs:
     - name: Unzip Custom Root Folder
       run: |
         cd device/infinix/X6716/recovery
-        rm -rf root
+        cd root
         unzip root.zip
         rm root.zip
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
