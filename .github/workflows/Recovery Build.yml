@@ -136,6 +136,14 @@ jobs:
       with:
         swap-size-gb: 12
 
+    - name: Unzip Custom Root Folder
+      run: |
+        cd device/infinix/X6716/recovery
+        rm -rf root
+        unzip root.zip -d root
+        rm root.zip
+        
+
     - name: Building recovery
       run: |
         source build/envsetup.sh
