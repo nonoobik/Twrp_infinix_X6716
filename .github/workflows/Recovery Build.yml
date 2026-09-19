@@ -15,7 +15,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/SKOCHE/Twrp_Infinix_X6716'
+        default: 'https://github.com/nonoobik/Twrp_Infinix_X6716'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
