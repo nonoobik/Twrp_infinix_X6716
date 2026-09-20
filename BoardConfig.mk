@@ -181,3 +181,6 @@ TW_BACKUP_EXCLUSIONS := /data/fonts/files
 
 # Device 
 TW_DEVICE_VERSION := 3.7.1_12.1 for X6716 by nonoobik
+
+TW_BUILD_STATIC_TOOLS := true
+PRODUCT_PACKAGES += resetprop
